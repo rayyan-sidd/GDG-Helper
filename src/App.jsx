@@ -31,6 +31,7 @@ import {
   ExternalLink,
   CheckSquare,
   Square,
+  ArrowLeft, // Added for mobile back buttons
 } from "lucide-react";
 
 // --- Hardcoded Skill Badge Data ---
@@ -45,13 +46,11 @@ const cloudBoostData = [
         title: "Create a Virtual Machine (GSP001)",
         labUrl: "https://www.skills.google/course_templates/754/labs/584200",
         resources: [
-          // TODO: User will provide these links
           {
             type: "youtube",
             title: "YouTube Tutorial",
             url: "https://youtu.be/UnfDTYpP4Ws?si=eG9G234ojf1xwHBa",
           },
-          // { type: "github", title: "GitHub Repo", url: "#" },
         ],
       },
       {
@@ -59,7 +58,6 @@ const cloudBoostData = [
         title: "Creating a Persistent Disk (GSP004)",
         labUrl: "https://www.skills.google/course_templates/754/labs/584201",
         resources: [
-          // TODO: User will provide this link
           {
             type: "youtube",
             title: "YouTube Tutorial",
@@ -78,7 +76,6 @@ const cloudBoostData = [
           "Hosting a Web App on Google Gloud using Compute Engine (GSP662)",
         labUrl: "https://www.skills.google/course_templates/754/labs/584202",
         resources: [
-          // TODO: User will provide this link
           {
             type: "youtube",
             title: "YouTube Tutorial",
@@ -217,8 +214,6 @@ const cloudBoostData = [
         title: "Get started with Pub/Sub: Challenge Lab (ARC113)",
         labUrl: "https://www.skills.google/course_templates/728/labs/594565",
         resources: [
-          // NOTE: These are the links you provided. They look like they are for the "Bucket Lock" lab.
-          // You can replace them when you find the correct ones!
           {
             type: "youtube",
             title: "Challenge Lab (Video)",
@@ -233,7 +228,6 @@ const cloudBoostData = [
       },
     ],
   },
-  // --- Placeholders for the rest of your badges ---
   {
     id: "badge4",
     title: "Get Started with API Gateway",
@@ -284,7 +278,6 @@ const cloudBoostData = [
     title: "Develop GenAI Apps with Gemini and Streamlit",
     labs: [],
   },
-  // Don't forget the 20th badge!
   {
     id: "badge20",
     title: "GenAI Arcade Game",
@@ -293,8 +286,8 @@ const cloudBoostData = [
       {
         id: "lab20-1",
         title: "Play the GenAI Arcade Game",
+        labUrl: "#", // <-- TODO: Add lab link
         resources: [
-          // TODO: Add the real links here when you find them
           { type: "youtube", title: "Arcade Game Guide", url: "#" },
           { type: "other", title: "Link to the Arcade", url: "#" },
         ],
@@ -304,7 +297,6 @@ const cloudBoostData = [
 ];
 
 // --- Firebase Configuration ---
-// PASTE YOUR FIREBASE CONFIG OBJECT HERE
 const firebaseConfig = {
   apiKey: "AIzaSyDTUMM-KEArGS8ZE3wd2iGR7W1RBFydbwM",
   authDomain: "gdg-helper-89af3.firebaseapp.com",
@@ -336,43 +328,29 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isAuthReady, setIsAuthReady] = useState(false);
   const [error, setError] = useState(null);
+  const [mobileView, setMobileView] = useState("badges");
 
-  // --- THIS IS THE FIX ---
-  // We load the data from localStorage *inside* the useState initializer.
-  // This function runs ONLY ONCE when the app first loads.
   const [completedLabs, setCompletedLabs] = useState(() => {
     try {
       const savedProgress = localStorage.getItem(LOCAL_STORAGE_KEY);
       if (savedProgress) {
-        // If we find saved data, initialize the state with it.
         return new Set(JSON.parse(savedProgress));
       }
     } catch (e) {
       console.error("Failed to load progress from localStorage", e);
     }
-    // If we find nothing (or an error), initialize with an empty Set.
     return new Set();
   });
-  // -----------------------
 
-  // --- DELETED ---
-  // We no longer need the separate useEffect for loading,
-  // since it's now handled in useState above.
-  // -----------------
-
-  // --- Save completed labs to localStorage (THIS IS GOOD) ---
   useEffect(() => {
     try {
-      // Convert the Set to an Array to save it as a JSON string
       const dataToSave = JSON.stringify(Array.from(completedLabs));
       localStorage.setItem(LOCAL_STORAGE_KEY, dataToSave);
     } catch (e) {
       console.error("Failed to save progress to localStorage", e);
     }
-  }, [completedLabs]); // This effect now ONLY runs when completedLabs changes
-  // ----------------------------------------------------
+  }, [completedLabs]);
 
-  // Function to toggle lab completion
   const toggleLabCompletion = (labId) => {
     setCompletedLabs((prevCompleted) => {
       const newCompleted = new Set(prevCompleted);
@@ -436,10 +414,12 @@ function App() {
     } else {
       setSelectedLab(null);
     }
+    setMobileView("labs"); // Change view on mobile
   };
 
   const handleSelectLab = (lab) => {
     setSelectedLab(lab);
+    setMobileView("resources"); // Change view on mobile
   };
 
   // Set default selection
@@ -451,27 +431,100 @@ function App() {
     }
   }, []);
 
+  // --- THIS IS THE FIX ---
+  // UserInfoBox now *always* renders the User ID part
+  const UserInfoBox = () => (
+    <div className="mb-4 p-2 bg-gray-700 rounded-lg">
+      {/* Admin status is still conditional */}
+      {isAdmin && (
+        <div className="flex items-center text-green-400 font-medium mb-1">
+          <ShieldCheck className="h-5 w-5 mr-2" />
+          Admin Mode Active
+        </div>
+      )}
+      {/* User ID is now ALWAYS shown */}
+      <div className="text-xs text-gray-400 truncate">
+        <span className="font-medium">Your User ID:</span> {userId || "..."}
+      </div>
+    </div>
+  );
+  // --- END OF FIX ---
+
+  const ResourceContent = ({ isMobile }) => (
+    <>
+      {!isAuthReady || error ? (
+        <div className="flex flex-col items-center justify-center h-full">
+          <Loader2 className="animate-spin h-12 w-12 text-blue-500 mb-4" />
+          <p className="text-lg">
+            {error ? error : "Connecting to helper service..."}
+          </p>
+        </div>
+      ) : !selectedLab ? (
+        <div className="flex flex-col items-center justify-center h-full">
+          <HelpCircle className="h-12 w-12 text-gray-500 mb-4" />
+          <h2 className="text-xl font-semibold text-white">No Labs Added</h2>
+          <p className="text-gray-400">
+            Labs for this badge will be added soon!
+          </p>
+        </div>
+      ) : (
+        <ResourceViewer
+          key={selectedLab.id}
+          lab={selectedLab}
+          userId={userId}
+          isAdmin={isAdmin}
+          collectionPath={queriesCollectionPath}
+          onBack={isMobile ? () => setMobileView("labs") : null}
+        />
+      )}
+    </>
+  );
+
   return (
-    <div className="flex h-screen bg-gray-900 text-gray-200 font-inter antialiased">
-      {/* Left Sidebar: Badge List */}
-      <aside className="w-1/4 h-full bg-gray-800 p-6 overflow-y-auto shadow-lg">
+    <div className="flex flex-col md:flex-row md:h-screen bg-gray-900 text-gray-200 font-inter antialiased">
+      {/* Mobile View */}
+      <div className="md:hidden w-full min-h-screen p-6">
+        {mobileView === "badges" && (
+          <aside>
+            <h1 className="text-2xl font-bold text-white mb-6">
+              Cloud Boost Helper
+            </h1>
+            <UserInfoBox />
+            <BadgeList
+              badges={cloudBoostData}
+              selectedBadge={selectedBadge}
+              onSelectBadge={handleSelectBadge}
+              completedLabs={completedLabs}
+            />
+          </aside>
+        )}
+
+        {mobileView === "labs" && (
+          <main>
+            <LabList
+              badge={selectedBadge}
+              selectedLab={selectedLab}
+              onSelectLab={handleSelectLab}
+              completedLabs={completedLabs}
+              onToggleCompletion={toggleLabCompletion}
+              onBack={() => setMobileView("badges")}
+            />
+          </main>
+        )}
+
+        {mobileView === "resources" && (
+          <section>
+            <ResourceContent isMobile={true} />
+          </section>
+        )}
+      </div>
+
+      {/* Desktop View */}
+      <aside className="hidden md:flex md:flex-col md:w-1/4 md:h-full bg-gray-800 p-6 md:overflow-y-auto shadow-lg flex-shrink-0">
         <h1 className="text-2xl font-bold text-white mb-6">
           Cloud Boost Helper
         </h1>
-
-        {isAdmin && (
-          <div className="mb-4 p-2 bg-gray-700 rounded-lg">
-            <div className="flex items-center text-green-400 font-medium mb-1">
-              <ShieldCheck className="h-5 w-5 mr-2" />
-              Admin Mode Active
-            </div>
-            <div className="text-xs text-gray-400 truncate">
-              <span className="font-medium">Your User ID:</span>{" "}
-              {userId || "..."}
-            </div>
-          </div>
-        )}
-
+        <UserInfoBox />
         <BadgeList
           badges={cloudBoostData}
           selectedBadge={selectedBadge}
@@ -480,43 +533,19 @@ function App() {
         />
       </aside>
 
-      {/* Middle Panel: Lab List */}
-      <main className="w-1/4 h-full bg-gray-800 border-l border-r border-gray-700 p-6 overflow-y-auto">
+      <main className="hidden md:flex md:flex-col md:w-1/4 md:h-full bg-gray-800 border-l border-r border-gray-700 p-6 md:overflow-y-auto flex-shrink-0">
         <LabList
           badge={selectedBadge}
           selectedLab={selectedLab}
           onSelectLab={handleSelectLab}
           completedLabs={completedLabs}
           onToggleCompletion={toggleLabCompletion}
+          onBack={null} // No back button on desktop
         />
       </main>
 
-      {/* Right Panel: Resource Viewer & Q&A */}
-      <section className="w-1/2 h-full p-8 overflow-y-auto">
-        {!isAuthReady || error ? (
-          <div className="flex flex-col items-center justify-center h-full">
-            <Loader2 className="animate-spin h-12 w-12 text-blue-500 mb-4" />
-            <p className="text-lg">
-              {error ? error : "Connecting to helper service..."}
-            </p>
-          </div>
-        ) : !selectedLab ? (
-          <div className="flex flex-col items-center justify-center h-full">
-            <HelpCircle className="h-12 w-12 text-gray-500 mb-4" />
-            <h2 className="text-xl font-semibold text-white">No Labs Added</h2>
-            <p className="text-gray-400">
-              Labs for this badge will be added soon!
-            </p>
-          </div>
-        ) : (
-          <ResourceViewer
-            key={selectedLab.id}
-            lab={selectedLab}
-            userId={userId}
-            isAdmin={isAdmin}
-            collectionPath={queriesCollectionPath}
-          />
-        )}
+      <section className="hidden md:block md:w-1/2 md:h-full p-8 md:overflow-y-auto">
+        <ResourceContent isMobile={false} />
       </section>
     </div>
   );
@@ -597,11 +626,22 @@ function LabList({
   onSelectLab,
   completedLabs,
   onToggleCompletion,
+  onBack,
 }) {
   if (!badge) return null;
 
   return (
     <div>
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="flex items-center text-blue-400 hover:underline mb-4"
+        >
+          <ArrowLeft className="h-4 w-4 mr-1" />
+          Back to Badges
+        </button>
+      )}
+
       <h2 className="text-xl font-semibold text-white mb-4 p-2">
         {badge.title}
       </h2>
@@ -672,7 +712,7 @@ function LabList({
 /**
  * Renders the resources and Q&A section for the selected lab.
  */
-function ResourceViewer({ lab, userId, isAdmin, collectionPath }) {
+function ResourceViewer({ lab, userId, isAdmin, collectionPath, onBack }) {
   if (!lab) return null;
 
   const getIcon = (type) => {
@@ -688,6 +728,16 @@ function ResourceViewer({ lab, userId, isAdmin, collectionPath }) {
 
   return (
     <div>
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="flex items-center text-blue-400 hover:underline mb-4"
+        >
+          <ArrowLeft className="h-4 w-4 mr-1" />
+          Back to Labs
+        </button>
+      )}
+
       <h2 className="text-3xl font-bold text-white mb-6">{lab.title}</h2>
 
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
