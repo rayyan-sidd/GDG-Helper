@@ -249,6 +249,52 @@ const cloudBoostData = [
           },
         ],
       },
+      {
+        id: "lab4-2",
+        title: "Pub/Sub: Qwik Start - Console",
+        labUrl: "https://www.skills.google/course_templates/728/labs/594563",
+        resources: [
+          {
+            type: "youtube",
+            title: "Cloud Scheduler Qwik Start (Video)",
+            url: "https://youtu.be/c7Dh7RX02oU?si=Q21T604Zruj6vcjL",
+          },
+          {
+            type: "github",
+            title: "API Gateway: Qwik Start (Guide)",
+            url: "https://youtu.be/r8pnC0kwt-8?si=gPzIBvi2FFwVPR6p",
+          },
+        ],
+      },
+      {
+        id: "lab4-3",
+        title: "Cloud Run Functions: Qwik Start - Console",
+        labUrl: "https://www.skills.google/course_templates/662/labs/592576",
+        resources: [
+          {
+            type: "youtube",
+            title: "Cloud Scheduler Qwik Start (Video)",
+            url: "https://www.youtube.com/watch?v=IBHFrTLcTY0",
+          },
+        ],
+      },
+      {
+        id: "lab4-4",
+        title: "Getting Started with API Gateway: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/662/labs/592577",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/N2yLVNGvQNY?si=cIetN79_vb7xyUYm",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Getting%20Started%20with%20API%20Gateway%3A%20Challenge%20Lab/Getting%20Started%20with%20API%20Gateway%3A%20Challenge%20Lab.md",
+          },
+        ],
+      },
     ],
   },
   { id: "badge5", title: "Get Started with Looker", labs: [] },
@@ -285,8 +331,17 @@ const cloudBoostData = [
     labs: [
       {
         id: "lab20-1",
-        title: "Play the GenAI Arcade Game",
-        labUrl: "#", // <-- TODO: Add lab link
+        title: "Conversations & Creations",
+        labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
+        resources: [
+          { type: "youtube", title: "Arcade Game Guide", url: "#" },
+          { type: "other", title: "Link to the Arcade", url: "#" },
+        ],
+      },
+      {
+        id: "lab20-2",
+        title: "Prep with AI",
+        labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
         resources: [
           { type: "youtube", title: "Arcade Game Guide", url: "#" },
           { type: "other", title: "Link to the Arcade", url: "#" },
