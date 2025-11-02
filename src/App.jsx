@@ -41,53 +41,53 @@ const cloudBoostData = [
     id: "badge1",
     title: "The Basics of Google Cloud Compute",
     labs: [
-      {
-        id: "lab1-1",
-        title: "Create a Virtual Machine (GSP001)",
-        labUrl: "https://www.skills.google/course_templates/754/labs/584200",
-        resources: [
-          {
-            type: "youtube",
-            title: "YouTube Tutorial",
-            url: "https://youtu.be/UnfDTYpP4Ws?si=eG9G234ojf1xwHBa",
-          },
-        ],
-      },
-      {
-        id: "lab1-2",
-        title: "Creating a Persistent Disk (GSP004)",
-        labUrl: "https://www.skills.google/course_templates/754/labs/584201",
-        resources: [
-          {
-            type: "youtube",
-            title: "YouTube Tutorial",
-            url: "https://youtu.be/cYz3thR_Ds8?si=2Eti0NO7ww5l31Fc",
-          },
-          {
-            type: "github",
-            title: "GitHub Repo",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Creating%20a%20Persistent%20Disk/Creating%20a%20Persistent%20Disk.md",
-          },
-        ],
-      },
-      {
-        id: "lab1-3",
-        title:
-          "Hosting a Web App on Google Gloud using Compute Engine (GSP662)",
-        labUrl: "https://www.skills.google/course_templates/754/labs/584202",
-        resources: [
-          {
-            type: "youtube",
-            title: "YouTube Tutorial",
-            url: "https://youtu.be/xCN4_jEAlhQ?si=GHE-EDvlYJSQHVDx",
-          },
-          {
-            type: "github",
-            title: "GitHub Repo",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Hosting%20a%20Web%20App%20on%20Google%20Cloud%20Using%20Compute%20Engine/Hosting%20a%20Web%20App%20on%20Google%20Cloud%20Using%20Compute%20Engine.md",
-          },
-        ],
-      },
+      // {
+      //   id: "lab1-1",
+      //   title: "Create a Virtual Machine (GSP001)",
+      //   labUrl: "https://www.skills.google/course_templates/754/labs/584200",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "YouTube Tutorial",
+      //       url: "https://youtu.be/UnfDTYpP4Ws?si=eG9G234ojf1xwHBa",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab1-2",
+      //   title: "Creating a Persistent Disk (GSP004)",
+      //   labUrl: "https://www.skills.google/course_templates/754/labs/584201",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "YouTube Tutorial",
+      //       url: "https://youtu.be/cYz3thR_Ds8?si=2Eti0NO7ww5l31Fc",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "GitHub Repo",
+      //       url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Creating%20a%20Persistent%20Disk/Creating%20a%20Persistent%20Disk.md",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab1-3",
+      //   title:
+      //     "Hosting a Web App on Google Gloud using Compute Engine (GSP662)",
+      //   labUrl: "https://www.skills.google/course_templates/754/labs/584202",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "YouTube Tutorial",
+      //       url: "https://youtu.be/xCN4_jEAlhQ?si=GHE-EDvlYJSQHVDx",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "GitHub Repo",
+      //       url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Hosting%20a%20Web%20App%20on%20Google%20Cloud%20Using%20Compute%20Engine/Hosting%20a%20Web%20App%20on%20Google%20Cloud%20Using%20Compute%20Engine.md",
+      //     },
+      //   ],
+      // },
       {
         id: "lab1-4",
         title: "The Basics of Google Cloud Compute: Challenge Cab (ARC120)",
@@ -111,57 +111,57 @@ const cloudBoostData = [
     id: "badge2",
     title: "Get started with Cloud Storage",
     labs: [
-      {
-        id: "lab2-1",
-        title: "APIs Explorer: Cloud Storage (GSP421)",
-        labUrl: "https://www.skills.google/course_templates/725/labs/589886",
-        resources: [
-          {
-            type: "youtube",
-            title: "APIs Explorer: Cloud Storage (Video)",
-            url: "https://youtu.be/7V2bYUXFUQ8?si=ZQ61hc69uggoiDaL",
-          },
-          {
-            type: "github",
-            title: "APIs Explorer: Cloud Storage (Guide)",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/APIs%20Explorer%3A%20Cloud%20Storage/APIs%20Explorer%3A%20Cloud%20Storage.md",
-          },
-        ],
-      },
-      {
-        id: "lab2-2",
-        title: "Cloud Storage: Quik Start - CLI/SDK (GSP074)",
-        labUrl: "https://www.skills.google/course_templates/725/labs/589887",
-        resources: [
-          {
-            type: "youtube",
-            title: "Cloud Storage: Qwik Start (Video)",
-            url: "https://youtu.be/6pk8o1EGRoI?si=Ulx5FuJTFbfTqH4e",
-          },
-          {
-            type: "github",
-            title: "Cloud Storage: Qwik Start (Guide)",
-            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Cloud%20Storage%3A%20Qwik%20Start%20-%20CLI%20SDK/TechCode.md",
-          },
-        ],
-      },
-      {
-        id: "lab2-3",
-        title: "Google Cloud Storage - Bucket Lock (GSP297)",
-        labUrl: "https://www.skills.google/course_templates/725/labs/589888",
-        resources: [
-          {
-            type: "youtube",
-            title: "Bucket Lock (Video)",
-            url: "https://youtu.be/i85f98uhzak?si=tfYtGX6egh65RtGB",
-          },
-          {
-            type: "github",
-            title: "Bucket Lock (Guide)",
-            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Google%20Cloud%20Storage%20-%20Bucket%20Lock/TechCode.md",
-          },
-        ],
-      },
+      // {
+      //   id: "lab2-1",
+      //   title: "APIs Explorer: Cloud Storage (GSP421)",
+      //   labUrl: "https://www.skills.google/course_templates/725/labs/589886",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "APIs Explorer: Cloud Storage (Video)",
+      //       url: "https://youtu.be/7V2bYUXFUQ8?si=ZQ61hc69uggoiDaL",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "APIs Explorer: Cloud Storage (Guide)",
+      //       url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/APIs%20Explorer%3A%20Cloud%20Storage/APIs%20Explorer%3A%20Cloud%20Storage.md",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab2-2",
+      //   title: "Cloud Storage: Quik Start - CLI/SDK (GSP074)",
+      //   labUrl: "https://www.skills.google/course_templates/725/labs/589887",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Cloud Storage: Qwik Start (Video)",
+      //       url: "https://youtu.be/6pk8o1EGRoI?si=Ulx5FuJTFbfTqH4e",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "Cloud Storage: Qwik Start (Guide)",
+      //       url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Cloud%20Storage%3A%20Qwik%20Start%20-%20CLI%20SDK/TechCode.md",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab2-3",
+      //   title: "Google Cloud Storage - Bucket Lock (GSP297)",
+      //   labUrl: "https://www.skills.google/course_templates/725/labs/589888",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Bucket Lock (Video)",
+      //       url: "https://youtu.be/i85f98uhzak?si=tfYtGX6egh65RtGB",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "Bucket Lock (Guide)",
+      //       url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Google%20Cloud%20Storage%20-%20Bucket%20Lock/TechCode.md",
+      //     },
+      //   ],
+      // },
       {
         id: "lab2-4",
         title: "Get Started with Cloud Storage: Challenge Lab (ARC111)",
@@ -185,30 +185,30 @@ const cloudBoostData = [
     id: "badge3",
     title: "Get started with Pub/Sub",
     labs: [
-      {
-        id: "lab3-1",
-        title: "Pub/Sub: Quik Start - Console (GSP096)",
-        labUrl: "https://www.skills.google/course_templates/728/labs/594563",
-        resources: [
-          {
-            type: "youtube",
-            title: "Pub/Sub Qwik Start (Video)",
-            url: "https://youtu.be/r8pnC0kwt-8?si=gPzIBvi2FFwVPR6p",
-          },
-        ],
-      },
-      {
-        id: "lab3-2",
-        title: "Cloud Scheduler: Quik Start (GSP401)",
-        labUrl: "https://www.skills.google/course_templates/728/labs/594564",
-        resources: [
-          {
-            type: "youtube",
-            title: "Cloud Scheduler Qwik Start (Video)",
-            url: "https://youtu.be/Dn-UmNK4U98?si=KIj1ZWJ92lieYXxm",
-          },
-        ],
-      },
+      // {
+      //   id: "lab3-1",
+      //   title: "Pub/Sub: Quik Start - Console (GSP096)",
+      //   labUrl: "https://www.skills.google/course_templates/728/labs/594563",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Pub/Sub Qwik Start (Video)",
+      //       url: "https://youtu.be/r8pnC0kwt-8?si=gPzIBvi2FFwVPR6p",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab3-2",
+      //   title: "Cloud Scheduler: Quik Start (GSP401)",
+      //   labUrl: "https://www.skills.google/course_templates/728/labs/594564",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Cloud Scheduler Qwik Start (Video)",
+      //       url: "https://youtu.be/Dn-UmNK4U98?si=KIj1ZWJ92lieYXxm",
+      //     },
+      //   ],
+      // },
       {
         id: "lab3-3",
         title: "Get started with Pub/Sub: Challenge Lab (ARC113)",
@@ -232,52 +232,52 @@ const cloudBoostData = [
     id: "badge4",
     title: "Get Started with API Gateway",
     labs: [
-      {
-        id: "lab4-1",
-        title: "API Gateway: Qwik Start",
-        labUrl: "https://www.skills.google/course_templates/662/labs/592574",
-        resources: [
-          {
-            type: "youtube",
-            title: "API Gateway: Qwik Start (Video)",
-            url: "https://youtu.be/c7Dh7RX02oU?si=Q21T604Zruj6vcjL",
-          },
-          {
-            type: "github",
-            title: "API Gateway: Qwik Start (Guide)",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/API%20Gateway%3A%20Qwik%20Start/abhishek.md",
-          },
-        ],
-      },
-      {
-        id: "lab4-2",
-        title: "Pub/Sub: Qwik Start - Console",
-        labUrl: "https://www.skills.google/course_templates/728/labs/594563",
-        resources: [
-          {
-            type: "youtube",
-            title: "Cloud Scheduler Qwik Start (Video)",
-            url: "https://youtu.be/c7Dh7RX02oU?si=Q21T604Zruj6vcjL",
-          },
-          {
-            type: "github",
-            title: "API Gateway: Qwik Start (Guide)",
-            url: "https://youtu.be/r8pnC0kwt-8?si=gPzIBvi2FFwVPR6p",
-          },
-        ],
-      },
-      {
-        id: "lab4-3",
-        title: "Cloud Run Functions: Qwik Start - Console",
-        labUrl: "https://www.skills.google/course_templates/662/labs/592576",
-        resources: [
-          {
-            type: "youtube",
-            title: "Cloud Scheduler Qwik Start (Video)",
-            url: "https://www.youtube.com/watch?v=IBHFrTLcTY0",
-          },
-        ],
-      },
+      // {
+      //   id: "lab4-1",
+      //   title: "API Gateway: Qwik Start",
+      //   labUrl: "https://www.skills.google/course_templates/662/labs/592574",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "API Gateway: Qwik Start (Video)",
+      //       url: "https://youtu.be/c7Dh7RX02oU?si=Q21T604Zruj6vcjL",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "API Gateway: Qwik Start (Guide)",
+      //       url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/API%20Gateway%3A%20Qwik%20Start/abhishek.md",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab4-2",
+      //   title: "Pub/Sub: Qwik Start - Console",
+      //   labUrl: "https://www.skills.google/course_templates/728/labs/594563",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Cloud Scheduler Qwik Start (Video)",
+      //       url: "https://youtu.be/c7Dh7RX02oU?si=Q21T604Zruj6vcjL",
+      //     },
+      //     {
+      //       type: "github",
+      //       title: "API Gateway: Qwik Start (Guide)",
+      //       url: "https://youtu.be/r8pnC0kwt-8?si=gPzIBvi2FFwVPR6p",
+      //     },
+      //   ],
+      // },
+      // {
+      //   id: "lab4-3",
+      //   title: "Cloud Run Functions: Qwik Start - Console",
+      //   labUrl: "https://www.skills.google/course_templates/662/labs/592576",
+      //   resources: [
+      //     {
+      //       type: "youtube",
+      //       title: "Cloud Scheduler Qwik Start (Video)",
+      //       url: "https://www.youtube.com/watch?v=IBHFrTLcTY0",
+      //     },
+      //   ],
+      // },
       {
         id: "lab4-4",
         title: "Getting Started with API Gateway: Challenge Lab",
