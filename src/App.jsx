@@ -297,58 +297,371 @@ const cloudBoostData = [
       },
     ],
   },
-  { id: "badge5", title: "Get Started with Looker", labs: [] },
-  { id: "badge6", title: "Get Started with Dataplex", labs: [] },
-  { id: "badge7", title: "Get Started with Google Workspace Tools", labs: [] },
-  { id: "badge8", title: "App Building with Appsheet", labs: [] },
-  { id: "badge9", title: "Develop with Apps Script and AppSheet", labs: [] },
-  { id: "badge10", title: "Build a Website on Google Cloud", labs: [] },
-  { id: "badge11", title: "Set Up a Google Cloud Network", labs: [] },
   {
-    id: "badge12",
-    title: "Store, Process, and Manage Data on Google Cloud - Console",
-    labs: [],
-  },
-  { id: "badge13", title: "Cloud Functions: 3 Ways", labs: [] },
-  { id: "badge14", title: "App Engine: 3 Ways", labs: [] },
-  { id: "badge15", title: "Cloud Speech API: 3 Ways", labs: [] },
-  { id: "badge16", title: "Monitoring in Google Cloud", labs: [] },
-  {
-    id: "badge17",
-    title: "Analyze Speech and Language with Google APIs",
-    labs: [],
-  },
-  { id: "badge18", title: "Prompt Design in Vertex AI", labs: [] },
-  {
-    id: "badge19",
-    title: "Develop GenAI Apps with Gemini and Streamlit",
-    labs: [],
-  },
-  {
-    id: "badge20",
-    title: "GenAI Arcade Game",
-    isGame: true,
+    id: "badge5",
+    title: "Get Started with Looker",
     labs: [
       {
-        id: "lab20-1",
-        title: "Conversations & Creations",
-        labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
+        id: "lab5-1",
+        title: "Get Started with Looker: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/647/labs/597988",
         resources: [
-          { type: "youtube", title: "Arcade Game Guide", url: "#" },
-          { type: "other", title: "Link to the Arcade", url: "#" },
-        ],
-      },
-      {
-        id: "lab20-2",
-        title: "Prep with AI",
-        labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
-        resources: [
-          { type: "youtube", title: "Arcade Game Guide", url: "#" },
-          { type: "other", title: "Link to the Arcade", url: "#" },
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/L1Bw0usnLGY?si=YnWLV_dZTIn4loUs",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Get%20Started%20with%20Looker%3A%20Challenge%20Lab/abhishek.md",
+          },
         ],
       },
     ],
   },
+  {
+    id: "badge6",
+    title: "Get Started with Dataplex",
+    labs: [
+      {
+        id: "lab6-1",
+        title: "Get Started with Dataplex: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/726/labs/595711",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/2mrIwJpuEGM?si=x8GEconagWBj6z1z",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Get%20Started%20with%20Dataplex%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge7",
+    title: "Get Started with Google Workspace Tools",
+    labs: [
+      {
+        id: "lab7-1",
+        title: "Get Started with Google Workspace Tools: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/676/labs/594930",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/KXAR73X9_FA?si=qjt_r0GHThnJ1wLh",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/chayandeokar/Cloud-Skills-2025/blob/master/Get%20Started%20with%20Google%20Workspace%20Tools%3A%20Challenge%20Lab.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge8",
+    title: "App Building with Appsheet",
+    labs: [
+      {
+        id: "lab8-1",
+        title: "App Building with AppSheet: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/635/labs/586900",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/SKr4tbOhDcc?si=BS66gQ8JcqFlISIZ",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/App%20Building%20with%20AppSheet%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge9",
+    title: "Develop with Apps Script and AppSheet",
+    labs: [
+      {
+        id: "lab9-1",
+        title: "Develop with Apps Script and AppSheet: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/715/labs/591613",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/gUTvyPDrwig?si=OeqcRnLpZC1NC70w",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Develop%20with%20Apps%20Script%20and%20AppSheet:%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge10",
+    title: "Build a Website on Google Cloud",
+    labs: [
+      {
+        id: "lab10-1",
+        title: "Build a Website on Google Cloud: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/638/labs/598065",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/DDOzIdHxp94?si=r-zUnEN8ko2WUVCI",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/chayandeokar/Cloud-Skills-2025/blob/master/Build%20a%20Website%20on%20Google%20Cloud%3A%20Challenge%20Lab%20/Build%20a%20Website%20on%20Google%20Cloud%3A%20Challenge%20Lab.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge11",
+    title: "Set Up a Google Cloud Network",
+    labs: [
+      {
+        id: "lab11-1",
+        title: "Set Up a Google Cloud Network: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/641/labs/594569",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/RRJzgdfrSy0?si=il7iBd5fn-wJq7c9",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Set%20Up%20a%20Google%20Cloud%20Network%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge12",
+    title: "Store, Process, and Manage Data on Google Cloud - Console",
+    labs: [
+      {
+        id: "lab12-1",
+        title: "Store, Process, and Manage Data on Google Cloud: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/658/labs/595720",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/TDM-GeGUKuI?si=mhfKU8WW7QvlOCuQ",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "http://github.com/chayandeokar/Cloud-Skills-2025/blob/master/Store,%20Process,%20and%20Manage%20Data%20on%20Google%20Cloud%20Challenge%20Lab/Store,%20Process,%20and%20Manage%20Data%20on%20Google%20Cloud%20Challenge%20Lab.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge13",
+    title: "Cloud Functions: 3 Ways",
+    labs: [
+      {
+        id: "lab13-1",
+        title: "Cloud Functions: 3 Ways: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/696/labs/598250",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/SQEMdrLIpXM?si=DQLS9LBYN9xSKBWp",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Cloud%20Functions:%203%20Ways:%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge14",
+    title: "App Engine: 3 Ways",
+    labs: [
+      {
+        id: "lab14-1",
+        title: "App Engine: 3 Ways: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/671/labs/597933",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/eD084Mbzy2M?si=b4xz3u7kmEhauayy",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/App%20Engine%3A%203%20Ways%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge15",
+    title: "Cloud Speech API: 3 Ways",
+    labs: [
+      {
+        id: "lab15-1",
+        title: "Cloud Speech API: 3 Ways: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/700/labs/595707",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/5I0MWLnbCCo?si=tWdOubBekEwPIO86",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Cloud%20Speech%20API%203%20Ways%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge16",
+    title: "Monitoring in Google Cloud",
+    labs: [
+      {
+        id: "lab16-1",
+        title: "Monitoring in Google Cloud: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/747/labs/597376",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/8Zqes9GrKCU?si=fumc5RoLJFktxt75",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Monitoring%20in%20Google%20Cloud%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge17",
+    title: "Analyze Speech and Language with Google APIs",
+    labs: [
+      {
+        id: "lab17-1",
+        title: "Analyze Speech and Language with Google APIs: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/634/labs/586896",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://www.youtube.com/watch?v=lAuWhCjjiHc",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/Analyze%20Speech%20%26%20Language%20with%20Google%20APIs%3A%20Challenge%20Lab/TechCode.md",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge18",
+    title: "Prompt Design in Vertex AI",
+    labs: [
+      {
+        id: "lab18-1",
+        title: "Prompt Design in Vertex AI: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/976/labs/594527",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/dLHiP08b_CE?si=1u_Aj0shvrcrQU13",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "badge19",
+    title: "Develop GenAI Apps with Gemini and Streamlit",
+    labs: [
+      {
+        id: "lab19-1",
+        title: "Develop GenAI Apps with Gemini and Streamlit: Challenge Lab",
+        labUrl: "https://www.skills.google/course_templates/978/labs/592573",
+        resources: [
+          {
+            type: "youtube",
+            title: "Challenge Lab (Video)",
+            url: "https://youtu.be/eX5sEVTtAts?si=mRrGg-B78nwlehN-",
+          },
+          {
+            type: "github",
+            title: "Challenge Lab (Guide)",
+            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Develop%20GenAI%20Apps%20with%20Gemini%20and%20Streamlit%20Challenge%20Lab/lab.md",
+          },
+        ],
+      },
+    ],
+  },
+  // {
+  //   id: "badge20",
+  //   title: "GenAI Arcade Game",
+  //   isGame: true,
+  //   labs: [
+  //     {
+  //       id: "lab20-1",
+  //       title: "Conversations & Creations",
+  //       labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
+  //       resources: [
+  //         { type: "youtube", title: "Arcade Game Guide", url: "#" },
+  //         { type: "other", title: "Link to the Arcade", url: "#" },
+  //       ],
+  //     },
+  //     {
+  //       id: "lab20-2",
+  //       title: "Prep with AI",
+  //       labUrl: "https://www.skills.google/games/6554", // <-- TODO: Add lab link
+  //       resources: [
+  //         { type: "youtube", title: "Arcade Game Guide", url: "#" },
+  //         { type: "other", title: "Link to the Arcade", url: "#" },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 // --- Firebase Configuration ---
