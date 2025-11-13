@@ -101,7 +101,7 @@ const cloudBoostData = [
           {
             type: "github",
             title: "GitHub Repo",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/The%20Basics%20of%20Google%20Cloud%20Compute%3A%20Challenge%20Lab/abhishek.md",
+            url: "https://github.com/prateekrajput08/Arcade-Google-Cloud-Labs/blob/main/The%20Basics%20of%20Google%20Cloud%20Compute%3A%20Challenge%20Lab/TechCode.md",
           },
         ],
       },
