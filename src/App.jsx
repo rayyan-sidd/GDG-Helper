@@ -631,7 +631,7 @@ const cloudBoostData = [
           {
             type: "github",
             title: "Challenge Lab (Guide)",
-            url: "https://github.com/Itsabhishek7py/GoogleCloudSkillsboost/blob/main/Develop%20GenAI%20Apps%20with%20Gemini%20and%20Streamlit%20Challenge%20Lab/lab.md",
+            url: "https://github.com/chayandeokar/Cloud-Skills-2025/blob/master/Develop%20GenAI%20Apps%20with%20Gemini%20and%20Streamlit%20Challenge%20Lab%20/lab.md",
           },
         ],
       },
